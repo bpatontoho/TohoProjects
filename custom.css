@@ -1,0 +1,37 @@
+/*-- scss:defaults --*/
+
+// Set your primary brand color (affects buttons, links, active states)
+$primary: #0953A2;
+
+// Set the top navigation/header background color if you use a navbar
+$navbar-bg: #0953A2;
+$navbar-fg: #ffffff;
+
+
+/*-- scss:rules --*/
+
+// 1. Custom styling for the Table of Contents / Sidebar container
+.sidebar {
+  background-color: #e3eefd !important;
+  border-right: 1px solid #d0e1fd;
+}
+
+// Ensure the links inside the sidebar match your brand or stay high-contrast
+.sidebar .sidebar-item-section .sidebar-item-toggle {
+  color: #0953A2;
+}
+
+.sidebar a {
+  color: #333333; // Dark text for readability on the light blue background
+}
+
+.sidebar a:hover {
+  color: #0953A2;
+  font-weight: bold;
+}
+
+// 2. Global styling for all table headers (including Python tabulate outputs)
+table th {
+  background-color: #0953A2 !important;
+  color: #ffffff !important; /* White text for high contrast against your blue brand color */
+}
