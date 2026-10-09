@@ -1,190 +1,190 @@
 ,County,Utility Name,Water Management District,Rates Effective Date,Unit,Minimum Charge,"Bill at 4,000 Gal (5.35 Ccf)","Bill at 8,000 Gal (10.70 Ccf)"
-2,Citrus,City of Crystal River,SWFWMD,10/1/20,kgal,$26.80,$62.60,$101.76
-3,Citrus,City of Inverness,SWFWMD,10/1/25,kgal,$28.67,$66.59,$104.51
-4,Citrus,Citrus County Utilities,SWFWMD,10/1/25,kgal,$39.70,$77.98,$100.84
-5,Clay,City of Green Cove Springs,SJRWMD,9/17/25,kgal,$58.08,$73.55,$114.91
-6,Clay,Town of Orange Park,SJRWMD,11/1/18,kgal,$38.28,$63.40,$90.64
-7,Clay,Town of Penney Farms,SJRWMD,10/1/25,kgal,$73.32,$107.40,$186.14
-8,Collier,Immokalee Water and Sewer District,SFWMD,10/1/25,kgal,$80.21,$130.73,$181.25
-9,Collier,City of Marco Island,SFWMD,5/1/20,kgal,$65.28,$106.40,$135.94
-10,Collier,City of Naples,SFWMD,10/1/25,kgal,$37.63,$65.91,$94.89
-11,Collier,Collier County,SFWMD,10/1/25,kgal,$85.90,$133.50,$187.88
-12,Columbia,City of Lake City,SRWMD,,kgal,$70.02,$102.78,$139.62
-13,DeSoto,City of Arcadia,SWFWMD,10/1/21,kgal,$50.26,$82.11,$124.99
-14,DeSoto,DeSoto County,SWFWMD,10/1/25,kgal,$53.91,$102.79,$157.88
-15,Duval,JEA (City of Jacksonville),SJRWMD,12/1/25,kgal,$30.63,$56.67,$89.31
+120,Pasco,Aloha Gardens,SWFWMD,10/1/25,kgal,$25.24,$98.76,$172.28
 16,Duval,"Beaches Energy Services (City of
 Jacksonville Beach)",SJRWMD,,kgal,$34.78,$86.30,$152.74
-17,Duval,City of Neptune Beach,SJRWMD,,kgal,$34.87,$84.23,$142.98
-18,Escambia,Emerald Coast Utilities Authority,NWFWMD,10/1/25,kgal,$32.55,$63.93,$114.21
-19,Flagler,City of Palm Coast,SJRWMD,,kgal,$51.38,$105.82,$162.36
-20,Gadsden,City of Chattahoochee,NWFWMD,,kgal,$36.15,$58.46,$80.77
-21,Gulf,City of Port St. Joe,NWFWMD,,kgal,$64.34,$113.76,$172.74
-22,Hardee,City of Bowling Green,SWFWMD,3/1/26,kgal,$71.30,$97.40,$134.52
-23,Hardee,Town of Zolfo Springs,SWFWMD,,kgal,$47.66,$68.36,$109.70
-24,Hendry,City of Clewiston,SFWMD,,kgal,$12.75,$47.95,$83.15
-25,Hernando,City of Brooksville,SWFWMD,,kgal,$60.11,$60.11,$94.19
-26,Hernando,Hernando County,SWFWMD,,kgal,$39.13,$72.37,$106.87
-27,Highlands,Town of Lake Placid,SWFWMD,10/1/23,kgal,$39.98,$75.02,$111.71
-28,Hillsborough,City of Plant City,SWFWMD,10/1/25,kgal,$30.67,$67.31,$106.05
-29,Hillsborough,City of Tampa,SWFWMD,10/1/25,ccf,$16.00,$66.15,$119.25
-30,Hillsborough,Hillsborough County,SWFWMD,10/1/25,kgal,$42.07,$86.91,$137.66
-31,Indian River,City of Vero Beach,SJRWMD,10/1/25,kgal,$50.06,$83.54,$126.98
-32,Indian River,Indian River County,SJRWMD,10/1/25,kgal,$37.10,$67.70,$103.79
-33,Jefferson,City of Monticello,NWFWMD,,ccf,$32.35,$80.71,$129.05
-34,Lake,City of Clermont,SJRWMD,10/1/24,kgal,$34.25,$55.09,$75.93
-35,Lake,City of Eustis,SJRWMD,6/1/25,kgal,$43.52,$69.64,$95.76
-36,Lake,City of Groveland,SJRWMD,10/1/25,kgal,$36.75,$67.27,$105.03
-37,Lake,Town of Lady Lake,SJRWMD,10/1/25,kgal,$54.81,$88.90,$126.34
-38,Lake,City of Leesburg,SJRWMD,10/1/25,ccf,$43.56,$57.69,$73.09
-39,Lake,City of Mascotte,SJRWMD,,kgal,$84.33,$109.97,$147.61
-40,Lake,City of Minneola,SJRWMD,10/1/23,kgal,$22.40,$40.94,$63.63
-41,Lake,Town of Montverde,SJRWMD,4/1/24,kgal,N/A,N/A,N/A
-42,Lake,City of Mount Dora,SJRWMD,,kgal,$44.46,$88.16,$121.19
-43,Lake,City of Tavares,SJRWMD,10/1/25,kgal,$43.88,$67.90,$95.00
-44,Lake,City of Umatilla,SJRWMD,10/1/25,kgal,$46.16,$84.04,$124.41
 47,Lee,"Bonita Springs Utilities, Inc.",SFWMD,10/1/25,kgal,$46.06,$79.42,$114.54
-48,Lee,City of Cape Coral,SFWMD,10/1/25,kgal,$52.43,$118.35,$191.56
-49,Lee,City of Fort Myers,SFWMD,10/1/25,kgal,$33.64,$117.80,$223.52
-50,Lee,Town of Fort Myers Beach,SFWMD,,kgal,N/A,N/A,N/A
-51,Lee,City of Sanibel,SFWMD,10/1/24,kgal,N/A,N/A,N/A
-52,Lee,"Gateway Community Development
-District",SFWMD,10/1/25,kgal,$41.25,$98.41,$162.67
-53,Lee,Greater Pine Island Water Association,SFWMD,5/1/25,kgal,N/A,N/A,N/A
-54,Lee,Island Water Association,SFWMD,3/1/09,kgal,N/A,N/A,N/A
-55,Lee,Lee County,SFWMD,7/1/25,kgal,$41.61,$87.57,$135.59
-56,Lee,Lehigh Acres,SFWMD,10/1/25,kgal,$49.46,$119.22,$168.65
-57,Lee,North Fort Myers,SFWMD,10/1/24,kgal,$47.62,$101.98,$158.40
-58,Leon,City of Tallahassee,NWFWMD,10/1/25,kgal,$42.44,$78.58,$123.96
-59,Levy,City of Williston,SWFWMD,,kgal,$81.21,$95.29,$125.54
-60,Liberty,Liberty County,NWFWMD,,kgal,N/A,N/A,N/A
-61,Manatee,City of Bradenton,SWFWMD,11/1/25,kgal,$43.20,$68.03,$106.39
-62,Manatee,Town of Longboat Key,SWFWMD,10/1/25,kgal,$49.91,$104.07,$162.22
-63,Manatee,City of Palmetto,SWFWMD,10/1/25,kgal,$31.52,$81.02,$134.42
-64,Manatee,Manatee County,SWFWMD,6/1/25,kgal,$41.90,$80.14,$119.88
+101,Orange,"Central Florida Tourism Oversight
+District",SFWMD,10/1/25,kgal,$21.52,$42.80,$64.08
+4,Citrus,Citrus County Utilities,SWFWMD,10/1/25,kgal,$39.70,$77.98,$100.84
+158,Seminole,City of Altamonte Springs,SJRWMD,10/1/23,kgal,$13.88,$37.20,$75.41
+93,Orange,City of Apopka,SJRWMD,10/1/25,kgal,$40.58,$68.50,$97.54
+13,DeSoto,City of Arcadia,SWFWMD,10/1/21,kgal,$50.26,$82.11,$124.99
+139,Polk,City of Auburndale,SWFWMD,10/1/25,kgal,$50.87,$55.47,$64.63
+140,Polk,City of Bartow,SWFWMD,10/1/25,kgal,$38.01,$59.65,$83.83
 65,Marion,City of Belleview,SJRWMD,3/1/25,kgal,$37.25,$63.65,$91.35
+105,Palm Beach,City of Boca Raton,SFWMD,10/1/25,kgal,$40.85,$45.05,$49.25
+22,Hardee,City of Bowling Green,SWFWMD,3/1/26,kgal,$71.30,$97.40,$134.52
+106,Palm Beach,City of Boynton Beach,SFWMD,10/1/25,kgal,$40.78,$60.82,$82.58
+61,Manatee,City of Bradenton,SWFWMD,11/1/25,kgal,$43.20,$68.03,$106.39
+25,Hernando,City of Brooksville,SWFWMD,,kgal,$60.11,$60.11,$94.19
+48,Lee,City of Cape Coral,SFWMD,10/1/25,kgal,$52.43,$118.35,$191.56
+159,Seminole,City of Casselberry,SJRWMD,10/1/23,kgal,$29.81,$66.69,$113.32
+20,Gadsden,City of Chattahoochee,NWFWMD,,kgal,$36.15,$58.46,$80.77
+193,Washington,City of Chipley,NWFWMD,10/14/25,kgal,$69.84,$76.22,$103.78
+126,Pinellas,City of Clearwater,SWFWMD,10/1/25,kgal,$64.31,$89.88,$192.16
+34,Lake,City of Clermont,SJRWMD,10/1/24,kgal,$34.25,$55.09,$75.93
+24,Hendry,City of Clewiston,SFWMD,,kgal,$12.75,$47.95,$83.15
+85,Okaloosa,City of Crestview,NWFWMD,10/1/25,kgal,$45.85,$70.79,$120.88
+2,Citrus,City of Crystal River,SWFWMD,10/1/20,kgal,$26.80,$62.60,$101.76
+119,Pasco,City of Dade City,SWFWMD,10/1/22,kgal,$25.45,$52.37,$80.45
+141,Polk,City of Davenport,SWFWMD,10/1/25,kgal,$47.71,$70.98,$104.40
+176,Volusia,City of Daytona Beach,SJRWMD,10/1/25,kgal,$21.56,$88.12,$156.25
+190,Walton,City of DeFuniak Springs,NWFWMD,10/1/25,kgal,$70.57,$118.81,$182.65
+177,Volusia,City of DeLand,SJRWMD,10/1/25,kgal,$43.21,$77.05,$116.53
+107,Palm Beach,City of Delray Beach,SFWMD,10/1/25,kgal,$37.75,$64.87,$91.99
+178,Volusia,City of Deltona,SJRWMD,12/1/24,kgal,$82.37,$130.71,$242.23
+127,Pinellas,City of Dunedin,SWFWMD,10/1/25,kgal,$27.06,$92.22,$167.49
 66,Marion,City of Dunnellon,SWFWMD,10/1/25,kgal,$41.74,$93.62,$197.46
-67,Marion,City of Ocala,SJRWMD,10/1/25,ccf,$52.38,$78.00,$103.61
-68,Marion,Marion County,SJRWMD,,kgal,$35.28,$63.00,$80.06
-69,Martin,South Martin Regional Utility,SFWMD,,kgal,$41.92,$75.74,$114.18
-70,Martin,City of Stuart,SFWMD,10/1/21,kgal,$30.61,$79.61,$129.37
-71,Martin,Martin County,SFWMD,,kgal,$40.72,$71.20,$101.68
+143,Polk,City of Eagle Lake,SWFWMD,10/1/24,kgal,$49.12,$65.95,$100.15
+179,Volusia,City of Edgewater,SJRWMD,10/1/25,kgal,$42.67,$106.28,$192.36
+35,Lake,City of Eustis,SJRWMD,6/1/25,kgal,$43.52,$69.64,$95.76
+144,Polk,City of Fort Meade,SWFWMD,10/1/24,kgal,$38.55,$70.31,$103.63
+49,Lee,City of Fort Myers,SFWMD,10/1/25,kgal,$33.64,$117.80,$223.52
+87,Okaloosa,City of Fort Walton Beach,NWFWMD,10/1/25,kgal,$43.39,$70.25,$127.49
+145,Polk,City of Frostproof,SWFWMD,10/1/25,kgal,$69.90,$79.67,$118.75
+5,Clay,City of Green Cove Springs,SJRWMD,9/17/25,kgal,$58.08,$73.55,$114.91
+36,Lake,City of Groveland,SJRWMD,10/1/25,kgal,$36.75,$67.27,$105.03
+152,Santa Rosa,City of Gulf Breeze,NWFWMD,,kgal,$42.07,$86.47,$130.87
+128,Pinellas,City of Gulfport,SWFWMD,10/1/25,kgal,$53.67,$119.94,$255.12
+146,Polk,City of Haines City,SWFWMD,10/1/25,kgal,$42.59,$76.68,$112.12
 72,Miami-Dade,City of Hialeah,SFWMD,,kgal,$12.45,$62.45,$117.70
 73,Miami-Dade,City of Hialeah Gardens,SFWMD,,kgal,$6.25,$53.00,$106.00
 74,Miami-Dade,City of Homestead,SFWMD,,kgal,$37.80,$67.03,$97.79
+3,Citrus,City of Inverness,SWFWMD,10/1/25,kgal,$28.67,$66.59,$104.51
+80,Monroe,City of Key West,SFWMD,10/1/25,kgal,N/A,N/A,N/A
+147,Polk,City of Lake Alfred,SWFWMD,1/1/26,kgal,$49.93,$67.57,$89.44
+12,Columbia,City of Lake City,SRWMD,,kgal,$70.02,$102.78,$139.62
+148,Polk,City of Lake Wales,SWFWMD,10/1/25,kgal,$40.87,$71.79,$115.91
+110,Palm Beach,City of Lake Worth Beach,SFWMD,10/1/25,kgal,$47.03,$90.23,$141.87
+149,Polk,City of Lakeland,SWFWMD,10/1/23,kgal,$34.66,$64.54,$95.24
+129,Pinellas,City of Largo,SWFWMD,10/1/25,kgal,N/A,N/A,N/A
+38,Lake,City of Leesburg,SJRWMD,10/1/25,ccf,$43.56,$57.69,$73.09
+160,Seminole,City of Longwood,SJRWMD,10/1/23,kgal,$25.05,$70.65,$116.25
+94,Orange,City of Maitland,SJRWMD,,kgal,$38.22,$79.06,$121.86
+81,Monroe,City of Marathon,SFWMD,10/1/25,kgal,N/A,N/A,N/A
+9,Collier,City of Marco Island,SFWMD,5/1/20,kgal,$65.28,$106.40,$135.94
+88,Okaloosa,City of Mary Esther,NWFWMD,,kgal,$52.26,$111.58,$181.64
+39,Lake,City of Mascotte,SJRWMD,,kgal,$84.33,$109.97,$147.61
 75,Miami-Dade,City of Miami Beach,SFWMD,,kgal,$20.35,$88.59,$156.83
+153,Santa Rosa,City of Milton,NWFWMD,9/12/23,kgal,$48.17,$60.72,$110.92
+40,Lake,City of Minneola,SJRWMD,10/1/23,kgal,$22.40,$40.94,$63.63
+33,Jefferson,City of Monticello,NWFWMD,,ccf,$32.35,$80.71,$129.05
+42,Lake,City of Mount Dora,SJRWMD,,kgal,$44.46,$88.16,$121.19
+10,Collier,City of Naples,SFWMD,10/1/25,kgal,$37.63,$65.91,$94.89
+17,Duval,City of Neptune Beach,SJRWMD,,kgal,$34.87,$84.23,$142.98
+121,Pasco,City of New Port Richey,SWFWMD,10/1/25,kgal,$30.48,$74.88,$122.64
 76,Miami-Dade,City of North Miami,SFWMD,,kgal,$42.09,$71.29,$103.71
 77,Miami-Dade,City of North Miami Beach,SFWMD,,kgal,$17.63,$70.85,$129.14
-78,Miami-Dade,Miami-Dade County,SFWMD,,ccf,$13.67,$42.47,$108.08
-79,Monroe,Village of Islamorada,SFWMD,12/1/21,kgal,N/A,N/A,N/A
-80,Monroe,City of Key West,SFWMD,10/1/25,kgal,N/A,N/A,N/A
-81,Monroe,City of Marathon,SFWMD,10/1/25,kgal,N/A,N/A,N/A
+154,Sarasota,City of North Port,SWFWMD,11/1/25,kgal,$72.15,$134.47,$209.63
+67,Marion,City of Ocala,SJRWMD,10/1/25,ccf,$52.38,$78.00,$103.61
+96,Orange,City of Ocoee,SJRWMD,10/1/25,kgal,$44.76,$68.17,$92.48
+130,Pinellas,City of Oldsmar,SWFWMD,10/1/25,kgal,$34.86,$84.60,$150.92
+181,Volusia,City of Orange City,SJRWMD,10/1/25,kgal,$47.12,$111.92,$179.40
+97,Orange,City of Orlando,SJRWMD,10/1/25,kgal,N/A,N/A,N/A
+182,Volusia,City of Ormond Beach,SJRWMD,10/1/25,kgal,$41.28,$61.78,$104.42
+161,Seminole,City of Oviedo,SJRWMD,10/1/23,kgal,$64.72,$100.10,$141.30
+19,Flagler,City of Palm Coast,SJRWMD,,kgal,$51.38,$105.82,$162.36
+63,Manatee,City of Palmetto,SWFWMD,10/1/25,kgal,$31.52,$81.02,$134.42
+131,Pinellas,City of Pinellas Park,SWFWMD,,kgal,$64.41,$150.29,$236.17
+28,Hillsborough,City of Plant City,SWFWMD,10/1/25,kgal,$30.67,$67.31,$106.05
+185,Volusia,City of Port Orange,SJRWMD,10/1/25,kgal,$23.53,$54.29,$93.09
+21,Gulf,City of Port St. Joe,NWFWMD,,kgal,$64.34,$113.76,$172.74
+169,St. Lucie,City of Port St. Lucie,SFWMD,10/1/25,kgal,$28.81,$82.81,$141.55
+113,Palm Beach,City of Riviera Beach,SFWMD,10/1/25,kgal,$51.75,$91.07,$139.60
+132,Pinellas,City of Safety Harbor,SWFWMD,,kgal,$47.08,$91.64,$152.61
+162,Seminole,City of Sanford,SJRWMD,10/1/23,kgal,$26.29,$69.57,$117.29
+51,Lee,City of Sanibel,SFWMD,10/1/24,kgal,N/A,N/A,N/A
+155,Sarasota,City of Sarasota,SWFWMD,9/1/24,kgal,$50.55,$101.83,$162.23
+186,Volusia,City of South Daytona,SJRWMD,10/1/25,kgal,$37.47,$108.99,$193.18
+165,St. Johns,City of St. Augustine,SJRWMD,10/1/23,kgal,$35.10,$85.83,$150.95
+103,Osceola,City of St. Cloud,SFWMD,10/1/25,kgal,$27.01,$54.95,$104.24
+189,Wakulla,City of St. Marks,NWFWMD,8/22/23,kgal,$108.35,$125.59,$194.55
+133,Pinellas,City of St. Petersburg,SWFWMD,10/1/25,kgal,$39.54,$112.01,$201.59
+70,Martin,City of Stuart,SFWMD,10/1/21,kgal,$30.61,$79.61,$129.37
+58,Leon,City of Tallahassee,NWFWMD,10/1/25,kgal,$42.44,$78.58,$123.96
+29,Hillsborough,City of Tampa,SWFWMD,10/1/25,ccf,$16.00,$66.15,$119.25
+134,Pinellas,City of Tarpon Springs,SWFWMD,10/1/25,kgal,$50.13,$94.49,$172.15
+43,Lake,City of Tavares,SJRWMD,10/1/25,kgal,$43.88,$67.90,$95.00
+135,Pinellas,City of Treasure Island,SWFWMD,12/1/24,kgal,N/A,N/A,N/A
+44,Lake,City of Umatilla,SJRWMD,10/1/25,kgal,$46.16,$84.04,$124.41
+156,Sarasota,City of Venice,SWFWMD,10/1/23,kgal,$61.42,$125.08,$201.83
+31,Indian River,City of Vero Beach,SJRWMD,10/1/25,kgal,$50.06,$83.54,$126.98
+116,Palm Beach,City of West Palm Beach,SFWMD,10/1/25,ccf,$41.13,$79.98,$120.21
+173,Sumter,City of Wildwood,SWFWMD,10/1/25,kgal,$44.61,$87.61,$132.79
+59,Levy,City of Williston,SWFWMD,,kgal,$81.21,$95.29,$125.54
+99,Orange,City of Winter Garden,SJRWMD,10/1/25,kgal,$23.31,$51.23,$79.15
+150,Polk,City of Winter Haven,SWFWMD,5/1/24,kgal,$22.84,$57.72,$98.18
+100,Orange,City of Winter Park,SJRWMD,10/1/25,kgal,$23.87,$54.11,$87.35
+163,Seminole,City of Winter Springs,SJRWMD,10/1/25,kgal,$33.21,$78.77,$124.33
+122,Pasco,City of Zephyrhills,SWFWMD,11/1/25,kgal,$29.44,$69.16,$113.02
+11,Collier,Collier County,SFWMD,10/1/25,kgal,$85.90,$133.50,$187.88
+14,DeSoto,DeSoto County,SWFWMD,10/1/25,kgal,$53.91,$102.79,$157.88
+86,Okaloosa,Destin Water Users,NWFWMD,1/1/26,kgal,$52.73,$76.61,$101.63
+18,Escambia,Emerald Coast Utilities Authority,NWFWMD,10/1/25,kgal,$32.55,$63.93,$114.21
 82,Monroe,Florida Keys Aqueduct Authority,SFWMD,10/1/25,kgal,$64.70,$166.78,$278.46
+167,St. Lucie,Fort Pierce Utilities Authority,SFWMD,10/1/23,kgal,$41.87,$93.67,$145.47
+52,Lee,"Gateway Community Development
+District",SFWMD,10/1/25,kgal,$41.25,$98.41,$162.67
+53,Lee,Greater Pine Island Water Association,SFWMD,5/1/25,kgal,N/A,N/A,N/A
+26,Hernando,Hernando County,SWFWMD,,kgal,$39.13,$72.37,$106.87
+30,Hillsborough,Hillsborough County,SWFWMD,10/1/25,kgal,$42.07,$86.91,$137.66
+8,Collier,Immokalee Water and Sewer District,SFWMD,10/1/25,kgal,$80.21,$130.73,$181.25
+32,Indian River,Indian River County,SJRWMD,10/1/25,kgal,$37.10,$67.70,$103.79
+54,Lee,Island Water Association,SFWMD,3/1/09,kgal,N/A,N/A,N/A
+15,Duval,JEA (City of Jacksonville),SJRWMD,12/1/25,kgal,$30.63,$56.67,$89.31
 83,Monroe,"Key Largo Wastewater Treatment
 District",SFWMD,3/1/25,kgal,N/A,N/A,N/A
 84,Monroe,Key West Resort Utilities Corp.,SFWMD,,kgal,N/A,N/A,N/A
-85,Okaloosa,City of Crestview,NWFWMD,10/1/25,kgal,$45.85,$70.79,$120.88
-86,Okaloosa,Destin Water Users,NWFWMD,1/1/26,kgal,$52.73,$76.61,$101.63
-87,Okaloosa,City of Fort Walton Beach,NWFWMD,10/1/25,kgal,$43.39,$70.25,$127.49
-88,Okaloosa,City of Mary Esther,NWFWMD,,kgal,$52.26,$111.58,$181.64
+55,Lee,Lee County,SFWMD,7/1/25,kgal,$41.61,$87.57,$135.59
+56,Lee,Lehigh Acres,SFWMD,10/1/25,kgal,$49.46,$119.22,$168.65
+60,Liberty,Liberty County,NWFWMD,,kgal,N/A,N/A,N/A
+171,Sumter,Little Sumter Service Area,SWFWMD,10/1/25,kgal,$32.02,$53.58,$75.14
+108,Palm Beach,Loxahatchee River District,SFWMD,,kgal,N/A,N/A,N/A
+64,Manatee,Manatee County,SWFWMD,6/1/25,kgal,$41.90,$80.14,$119.88
+68,Marion,Marion County,SJRWMD,,kgal,$35.28,$63.00,$80.06
+71,Martin,Martin County,SFWMD,,kgal,$40.72,$71.20,$101.68
+78,Miami-Dade,Miami-Dade County,SFWMD,,ccf,$13.67,$42.47,$108.08
+57,Lee,North Fort Myers,SFWMD,10/1/24,kgal,$47.62,$101.98,$158.40
 89,Okaloosa,Okaloosa County,NWFWMD,10/1/25,kgal,$41.73,$77.80,$117.68
 90,Okeechobee,Okeechobee Utility Authority,SFWMD,10/1/25,kgal,$54.14,$113.98,$181.98
-93,Orange,City of Apopka,SJRWMD,10/1/25,kgal,$40.58,$68.50,$97.54
-94,Orange,City of Maitland,SJRWMD,,kgal,$38.22,$79.06,$121.86
-95,Orange,Town of Oakland,SJRWMD,10/1/25,kgal,$42.72,$78.98,$125.02
-96,Orange,City of Ocoee,SJRWMD,10/1/25,kgal,$44.76,$68.17,$92.48
-97,Orange,City of Orlando,SJRWMD,10/1/25,kgal,N/A,N/A,N/A
 98,Orange,Orange County Utilities,SJRWMD,10/1/25,kgal,$28.36,$52.19,$77.67
-99,Orange,City of Winter Garden,SJRWMD,10/1/25,kgal,$23.31,$51.23,$79.15
-100,Orange,City of Winter Park,SJRWMD,10/1/25,kgal,$23.87,$54.11,$87.35
-101,Orange,"Central Florida Tourism Oversight
-District",SFWMD,10/1/25,kgal,$21.52,$42.80,$64.08
 102,Orange,Orlando Utilities Commission,SJRWMD,10/1/25,kgal,N/A,N/A,N/A
-103,Osceola,City of St. Cloud,SFWMD,10/1/25,kgal,$27.01,$54.95,$104.24
-104,Osceola,Toho Water Authority,SFWMD,10/1/25,kgal,$27.01,$54.95,$104.24
-105,Palm Beach,City of Boca Raton,SFWMD,10/1/25,kgal,$40.85,$45.05,$49.25
-106,Palm Beach,City of Boynton Beach,SFWMD,10/1/25,kgal,$40.78,$60.82,$82.58
-107,Palm Beach,City of Delray Beach,SFWMD,10/1/25,kgal,$37.75,$64.87,$91.99
-108,Palm Beach,Loxahatchee River District,SFWMD,,kgal,N/A,N/A,N/A
-109,Palm Beach,Town of Jupiter,SFWMD,10/1/25,kgal,N/A,N/A,N/A
-110,Palm Beach,City of Lake Worth Beach,SFWMD,10/1/25,kgal,$47.03,$90.23,$141.87
-111,Palm Beach,Town of Lantana,SFWMD,10/1/25,kgal,$44.92,$76.48,$110.65
-112,Palm Beach,Village of Palm Springs,SFWMD,10/1/24,kgal,$26.55,$73.03,$121.63
-113,Palm Beach,City of Riviera Beach,SFWMD,10/1/25,kgal,$51.75,$91.07,$139.60
-114,Palm Beach,Village of Tequesta,SFWMD,10/1/25,kgal,N/A,N/A,N/A
-115,Palm Beach,Village of Wellington,SFWMD,10/1/25,kgal,$57.71,$83.63,$112.83
-116,Palm Beach,City of West Palm Beach,SFWMD,10/1/25,ccf,$41.13,$79.98,$120.21
 117,Palm Beach,Palm Beach County,SFWMD,10/1/25,kgal,$39.22,$58.82,$89.62
-118,Palm Beach,Seacoast Utility Authority,SFWMD,10/1/25,kgal,$62.14,$78.74,$99.90
-119,Pasco,City of Dade City,SWFWMD,10/1/22,kgal,$25.45,$52.37,$80.45
-120,Pasco,Aloha Gardens,SWFWMD,10/1/25,kgal,$25.24,$98.76,$172.28
-121,Pasco,City of New Port Richey,SWFWMD,10/1/25,kgal,$30.48,$74.88,$122.64
-122,Pasco,City of Zephyrhills,SWFWMD,11/1/25,kgal,$29.44,$69.16,$113.02
 123,Pasco,Pasco County,SWFWMD,10/1/25,kgal,$34.42,$71.94,$113.33
-124,Pasco,Seven Springs,SWFWMD,10/1/25,kgal,$47.85,$112.21,$176.57
-125,Pinellas,Town of Belleair,SWFWMD,10/1/23,kgal,N/A,N/A,N/A
-126,Pinellas,City of Clearwater,SWFWMD,10/1/25,kgal,$64.31,$89.88,$192.16
-127,Pinellas,City of Dunedin,SWFWMD,10/1/25,kgal,$27.06,$92.22,$167.49
-128,Pinellas,City of Gulfport,SWFWMD,10/1/25,kgal,$53.67,$119.94,$255.12
-129,Pinellas,City of Largo,SWFWMD,10/1/25,kgal,N/A,N/A,N/A
-130,Pinellas,City of Oldsmar,SWFWMD,10/1/25,kgal,$34.86,$84.60,$150.92
-131,Pinellas,City of Pinellas Park,SWFWMD,,kgal,$64.41,$150.29,$236.17
-132,Pinellas,City of Safety Harbor,SWFWMD,,kgal,$47.08,$91.64,$152.61
-133,Pinellas,City of St. Petersburg,SWFWMD,10/1/25,kgal,$39.54,$112.01,$201.59
-134,Pinellas,City of Tarpon Springs,SWFWMD,10/1/25,kgal,$50.13,$94.49,$172.15
-135,Pinellas,City of Treasure Island,SWFWMD,12/1/24,kgal,N/A,N/A,N/A
 136,Pinellas,Pinellas County,SWFWMD,10/1/25,kgal,$32.65,$81.13,$150.25
-139,Polk,City of Auburndale,SWFWMD,10/1/25,kgal,$50.87,$55.47,$64.63
-140,Polk,City of Bartow,SWFWMD,10/1/25,kgal,$38.01,$59.65,$83.83
-141,Polk,City of Davenport,SWFWMD,10/1/25,kgal,$47.71,$70.98,$104.40
-142,Polk,Town of Dundee,SWFWMD,10/1/25,kgal,$68.12,$72.68,$87.24
-143,Polk,City of Eagle Lake,SWFWMD,10/1/24,kgal,$49.12,$65.95,$100.15
-144,Polk,City of Fort Meade,SWFWMD,10/1/24,kgal,$38.55,$70.31,$103.63
-145,Polk,City of Frostproof,SWFWMD,10/1/25,kgal,$69.90,$79.67,$118.75
-146,Polk,City of Haines City,SWFWMD,10/1/25,kgal,$42.59,$76.68,$112.12
-147,Polk,City of Lake Alfred,SWFWMD,1/1/26,kgal,$49.93,$67.57,$89.44
-148,Polk,City of Lake Wales,SWFWMD,10/1/25,kgal,$40.87,$71.79,$115.91
-149,Polk,City of Lakeland,SWFWMD,10/1/23,kgal,$34.66,$64.54,$95.24
-150,Polk,City of Winter Haven,SWFWMD,5/1/24,kgal,$22.84,$57.72,$98.18
 151,Polk,Polk County,SWFWMD,10/1/25,kgal,$52.33,$94.33,$131.21
-152,Santa Rosa,City of Gulf Breeze,NWFWMD,,kgal,$42.07,$86.47,$130.87
-153,Santa Rosa,City of Milton,NWFWMD,9/12/23,kgal,$48.17,$60.72,$110.92
-154,Sarasota,City of North Port,SWFWMD,11/1/25,kgal,$72.15,$134.47,$209.63
-155,Sarasota,City of Sarasota,SWFWMD,9/1/24,kgal,$50.55,$101.83,$162.23
-156,Sarasota,City of Venice,SWFWMD,10/1/23,kgal,$61.42,$125.08,$201.83
+192,Walton,Regional Utilities - Walton County,NWFWMD,3/1/25,kgal,$63.22,$63.22,$66.54
 157,Sarasota,Sarasota County,SWFWMD,11/18/25,kgal,$47.38,$108.66,$173.42
-158,Seminole,City of Altamonte Springs,SJRWMD,10/1/23,kgal,$13.88,$37.20,$75.41
-159,Seminole,City of Casselberry,SJRWMD,10/1/23,kgal,$29.81,$66.69,$113.32
-160,Seminole,City of Longwood,SJRWMD,10/1/23,kgal,$25.05,$70.65,$116.25
-161,Seminole,City of Oviedo,SJRWMD,10/1/23,kgal,$64.72,$100.10,$141.30
-162,Seminole,City of Sanford,SJRWMD,10/1/23,kgal,$26.29,$69.57,$117.29
-163,Seminole,City of Winter Springs,SJRWMD,10/1/25,kgal,$33.21,$78.77,$124.33
+118,Palm Beach,Seacoast Utility Authority,SFWMD,10/1/25,kgal,$62.14,$78.74,$99.90
 164,Seminole,Seminole County,SJRWMD,10/1/23,kgal,$44.32,$74.80,$105.28
-165,St. Johns,City of St. Augustine,SJRWMD,10/1/23,kgal,$35.10,$85.83,$150.95
+124,Pasco,Seven Springs,SWFWMD,10/1/25,kgal,$47.85,$112.21,$176.57
+69,Martin,South Martin Regional Utility,SFWMD,,kgal,$41.92,$75.74,$114.18
+191,Walton,South Walton Utility Company,NWFWMD,10/1/25,kgal,$32.47,$69.63,$109.58
 166,St. Johns,St. Johns County,SJRWMD,1/1/24,kgal,$34.50,$74.10,$116.67
-167,St. Lucie,Fort Pierce Utilities Authority,SFWMD,10/1/23,kgal,$41.87,$93.67,$145.47
 168,St. Lucie,St. Lucie County Utilities,SFWMD,8/1/25,kgal,$56.92,$118.60,$183.73
-169,St. Lucie,City of Port St. Lucie,SFWMD,10/1/25,kgal,$28.81,$82.81,$141.55
 170,St. Lucie,St. Lucie West Services District,SFWMD,10/1/25,kgal,$45.46,$83.78,$122.10
-171,Sumter,Little Sumter Service Area,SWFWMD,10/1/25,kgal,$32.02,$53.58,$75.14
-172,Sumter,Village Center Service Area,SJRWMD,10/1/25,kgal,$34.23,$56.03,$77.83
-173,Sumter,City of Wildwood,SWFWMD,10/1/25,kgal,$44.61,$87.61,$132.79
-176,Volusia,City of Daytona Beach,SJRWMD,10/1/25,kgal,$21.56,$88.12,$156.25
-177,Volusia,City of DeLand,SJRWMD,10/1/25,kgal,$43.21,$77.05,$116.53
-178,Volusia,City of Deltona,SJRWMD,12/1/24,kgal,$82.37,$130.71,$242.23
-179,Volusia,City of Edgewater,SJRWMD,10/1/25,kgal,$42.67,$106.28,$192.36
-180,Volusia,"Utilities Commission of New Smyrna
-Beach",SJRWMD,10/1/25,kgal,$41.55,$68.43,$99.79
-181,Volusia,City of Orange City,SJRWMD,10/1/25,kgal,$47.12,$111.92,$179.40
-182,Volusia,City of Ormond Beach,SJRWMD,10/1/25,kgal,$41.28,$61.78,$104.42
+104,Osceola,Toho Water Authority,SFWMD,10/1/25,kgal,$27.01,$54.95,$104.24
+125,Pinellas,Town of Belleair,SWFWMD,10/1/23,kgal,N/A,N/A,N/A
+142,Polk,Town of Dundee,SWFWMD,10/1/25,kgal,$68.12,$72.68,$87.24
+50,Lee,Town of Fort Myers Beach,SFWMD,,kgal,N/A,N/A,N/A
+109,Palm Beach,Town of Jupiter,SFWMD,10/1/25,kgal,N/A,N/A,N/A
+37,Lake,Town of Lady Lake,SJRWMD,10/1/25,kgal,$54.81,$88.90,$126.34
+27,Highlands,Town of Lake Placid,SWFWMD,10/1/23,kgal,$39.98,$75.02,$111.71
+111,Palm Beach,Town of Lantana,SFWMD,10/1/25,kgal,$44.92,$76.48,$110.65
+62,Manatee,Town of Longboat Key,SWFWMD,10/1/25,kgal,$49.91,$104.07,$162.22
+41,Lake,Town of Montverde,SJRWMD,4/1/24,kgal,N/A,N/A,N/A
+95,Orange,Town of Oakland,SJRWMD,10/1/25,kgal,$42.72,$78.98,$125.02
+6,Clay,Town of Orange Park,SJRWMD,11/1/18,kgal,$38.28,$63.40,$90.64
+7,Clay,Town of Penney Farms,SJRWMD,10/1/25,kgal,$73.32,$107.40,$186.14
 183,Volusia,Town of Pierson,SJRWMD,7/1/21,kgal,N/A,N/A,N/A
 184,Volusia,Town of Ponce Inlet,SJRWMD,1/1/25,kgal,$41.22,$82.48,$140.68
-185,Volusia,City of Port Orange,SJRWMD,10/1/25,kgal,$23.53,$54.29,$93.09
-186,Volusia,City of South Daytona,SJRWMD,10/1/25,kgal,$37.47,$108.99,$193.18
+23,Hardee,Town of Zolfo Springs,SWFWMD,,kgal,$47.66,$68.36,$109.70
+180,Volusia,"Utilities Commission of New Smyrna
+Beach",SJRWMD,10/1/25,kgal,$41.55,$68.43,$99.79
+172,Sumter,Village Center Service Area,SJRWMD,10/1/25,kgal,$34.23,$56.03,$77.83
+79,Monroe,Village of Islamorada,SFWMD,12/1/21,kgal,N/A,N/A,N/A
+112,Palm Beach,Village of Palm Springs,SFWMD,10/1/24,kgal,$26.55,$73.03,$121.63
+114,Palm Beach,Village of Tequesta,SFWMD,10/1/25,kgal,N/A,N/A,N/A
+115,Palm Beach,Village of Wellington,SFWMD,10/1/25,kgal,$57.71,$83.63,$112.83
 187,Volusia,Volusia County - Softened,SJRWMD,1/1/25,kgal,$46.18,$90.42,$138.26
 188,Volusia,Volusia County - Unsoftened,SJRWMD,1/1/25,kgal,$46.18,$80.74,$117.40
-189,Wakulla,City of St. Marks,NWFWMD,8/22/23,kgal,$108.35,$125.59,$194.55
-190,Walton,City of DeFuniak Springs,NWFWMD,10/1/25,kgal,$70.57,$118.81,$182.65
-191,Walton,South Walton Utility Company,NWFWMD,10/1/25,kgal,$32.47,$69.63,$109.58
-192,Walton,Regional Utilities - Walton County,NWFWMD,3/1/25,kgal,$63.22,$63.22,$66.54
-193,Washington,City of Chipley,NWFWMD,10/14/25,kgal,$69.84,$76.22,$103.78
