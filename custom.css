@@ -35,3 +35,16 @@ table th {
   background-color: #0953A2 !important;
   color: #ffffff !important; /* White text for high contrast against your blue brand color */
 }
+
+:root {
+  --bs-navbar-bg: #000000 !important;
+}
+
+.navbar {
+  background-color: #000000 !important;
+}
+
+body.quarto-dashboard .navbar {
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+}

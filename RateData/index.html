@@ -48,7 +48,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="custom.css">
 </head>
 
 <body class="quarto-dashboard dashboard-fill dashboard-sidebar fullcontent quarto-light">
@@ -492,7 +492,7 @@ df_long_wastewater <- df_separated_wastewater |>
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
-# Reusable box plot function
+# box plot function
 create_rate_boxplot <- function(full_long_df, target_utility, plot_subtitle) {
   req(target_utility)
   n_orgs <- n_distinct(full_long_df$`Utility Name`)
@@ -525,6 +525,7 @@ create_rate_boxplot <- function(full_long_df, target_utility, plot_subtitle) {
 }
 
 # Render plots
+
 output$combined_plot <- renderPlot({
   create_rate_boxplot(df_long, input$selected_utility, "Combined Rates")
 })

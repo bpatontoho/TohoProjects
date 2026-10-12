@@ -2,7 +2,7 @@
 title: "Water & Wastewater Rate Dashboard"
 format: 
   dashboard:
-    css: styles.css
+    css: custom.css
     nav-buttons:
       - icon: download
         text: "Combined Rate Data CSV Download"
@@ -186,7 +186,7 @@ DT::dataTableOutput("wastewater_table")
 ```{r}
 #| context: server
 
-# Reusable box plot function
+# box plot function
 create_rate_boxplot <- function(full_long_df, target_utility, plot_subtitle) {
   req(target_utility)
   n_orgs <- n_distinct(full_long_df$`Utility Name`)
@@ -219,6 +219,7 @@ create_rate_boxplot <- function(full_long_df, target_utility, plot_subtitle) {
 }
 
 # Render plots
+
 output$combined_plot <- renderPlot({
   create_rate_boxplot(df_long, input$selected_utility, "Combined Rates")
 })

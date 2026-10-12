@@ -1,4 +1,7 @@
-/* Custom background color for the Quarto dashboard navigation / header bar */
+:root {
+  --bs-navbar-bg: #000000 !important;
+}
+
 .navbar {
-  background-color: #0953A2 !important;
+  background-color: #000000 !important;
 }
