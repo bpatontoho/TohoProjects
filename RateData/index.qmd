@@ -1,66 +1,131 @@
 ---
 title: "Rate Data Visualization"
-format: html
+format: dashboard
 editor: visual
 server: shiny
 ---
 
-\# {.sidebar}
-
 ```{r}
-#| warning: false
+#| context: setup
+#| echo: false
+#| output: false
 
 library(shiny)
 library(tidyverse)
+library(DT)
+
+# Load data
+df <- read.csv("combinedratedata.csv", 
+               check.names = FALSE, 
+               stringsAsFactors = FALSE)
+
+df$`Minimum Charge` <- as.numeric(gsub("[\\$,]", "", as.character(df$`Minimum Charge`)))
+df$`Bill at 4,000 Gal (5.35 Ccf)` <- as.numeric(gsub("[\\$,]", "", as.character(df$`Bill at 4,000 Gal (5.35 Ccf)`)))
+df$`Bill at 8,000 Gal (10.70 Ccf)` <- as.numeric(gsub("[\\$,]", "", as.character(df$`Bill at 8,000 Gal (10.70 Ccf)`)))
+
+df <- df |> select(-any_of(c("Rates Effective Date", "Unit")))
+
+# format dataset for box plots
+df_long <- df |>
+  pivot_longer(
+    cols = c(`Minimum Charge`, `Bill at 4,000 Gal (5.35 Ccf)`, `Bill at 8,000 Gal (10.70 Ccf)`),
+    names_to = "Metric",
+    values_to = "Value"
+  ) |>
+  filter(!is.na(Value))
 ```
 
 ```{r}
-df <- read_csv("RateData/combinedratedata.csv")
-
-head(df)
-```
-
-```{r}
+fluidRow(
+  column(
+    width = 6,
+    tags$label("Water Management District:"),          div(              style = "max-height: 200px; overflow-y: auto; border: 1px solid #ddd; padding: 8px; border-radius: 4px; background-color: #fff;",              checkboxGroupInput(                  inputId = "selected_wmd",                   label = NULL,                  choices = sort(unique(df$`Water Management District`)),
+        selected = unique(df$`Water Management District`)
+      )
+    )
+  )
+)
 
 selectInput(
   inputId = "selected_utility", 
   label = "Select Utility to Compare:",
   choices = sort(unique(df$`Utility Name`)),
-  selected = "My Water Company"
+  selected = "Toho Water Authority"
 )
-
-plotOutput("comparison_plot")
 ```
 
 ```{r}
-# Render the interactive plot
+
 plotOutput("comparison_plot")
 ```
 
 ```{r}
 #| context: server
 
+# 1. Render the comparison box plot
 output$comparison_plot <- renderPlot({
+  # Ensure inputs exist and are non-empty
+  req(input$selected_utility, input$selected_wmd, 
+      length(input$selected_wmd) > 0)
+  
   target <- input$selected_utility
   
-  # Filter data for the selected utility
-  selected_df <- df %>% filter(`Utility Name` == target)
+  # Filter the background distribution based on remaining filter selection
+  filtered_df_long <- df_long |>
+    filter(
+      `Water Management District` %in% input$selected_wmd     )      
+  # Validate that we have data to plot   
+  validate(     need(nrow(filtered_df_long) > 0, "Please select at least one Water Management District.")   )      
+  # Calculate number of unique organizations in the filtered peer group   
+  n_orgs <- n_distinct(filtered_df_long$`Utility Name`)
   
-  ggplot(df, aes(x = "All Utilities", y = `Minimum Charge`)) +
-    # Overall distribution boxplot
-    geom_boxplot(fill = "lightblue", alpha = 0.5, outlier.shape = NA, width = 0.3) +
-    # Show all other utility points in the background for context
-    geom_jitter(width = 0.08, color = "gray60", alpha = 0.6, size = 2) +
-    # Highlight the selected utility's point(s) in a distinct color/shape
-    geom_point(data = selected_df, aes(x = "All Utilities", y = `Minimum Charge`), 
-               color = "firebrick", size = 5, shape = 18) +
+  # Pull selected utility from the FULL dataset so the diamond stays visible 
+  selected_df <- df_long |> 
+    filter(`Utility Name` == target) |>
+    rowwise() |>
+    mutate(
+      Percentile = round(mean(filtered_df_long$Value[filtered_df_long$Metric == Metric] <= Value, na.rm = TRUE) * 100)
+    ) |>
+    ungroup()
+  
+  # Generate horizontal box plots with metrics reordered by median value
+  ggplot(filtered_df_long, aes(x = Value, y = fct_reorder(Metric, Value, .fun = median, .desc = TRUE))) +
+    geom_boxplot(fill = "#e3eefd", alpha = 0.7, outlier.shape = NA, height = 0.5) +
+    geom_point(data = selected_df, aes(x = Value, y = fct_reorder(Metric, Value, .fun = median, .desc = TRUE)), 
+               color = "#00AA65", size = 4, shape = 18) +
+    geom_text(data = selected_df, 
+              aes(x = Value, y = fct_reorder(Metric, Value, .fun = median, .desc = TRUE), 
+                  label = paste0(target, ": $", sprintf("%.2f", Value), " (", Percentile, "%ile)")),
+              hjust = -0.15, vjust = -0.5, color = "black", fontface = "bold", size = 6) +
     labs(
-      title = paste("Minimum Charge Comparison:", target, "vs. Industry Distribution"),
-      subtitle = "Red diamond indicates the minimum charge for the selected utility",
-      x = "",
-      y = "Minimum Charge ($)"
+      title = paste("Rate Tier Comparison:", target, "vs. Industry Distribution"),
+      subtitle = paste("Green diamonds indicate selected utility charges | Filtered peer group (n =", n_orgs, "utilities)"),
+      x = "Amount ($)",
+      y = ""
     ) +
     theme_minimal(base_size = 14) +
-    theme(plot.title.position = "plot")
+    theme(plot.title.position = "plot") +
+    expand_limits(x = max(filtered_df_long$Value, na.rm = TRUE) * 1.35)
 })
+
+# 2. Render the interactive raw data table
+output$raw_data_table <- DT::renderDT({
+  req(input$selected_wmd, 
+      length(input$selected_wmd) > 0)
+  
+  df |>
+    filter(
+      `Water Management District` %in% input$selected_wmd
+    )
+}, options = list(
+  pageLength = 10,
+  scrollX = TRUE,
+  autoWidth = TRUE
+))
+```
+
+#### Combined Rate Data Full Data
+
+```{r}
+DT::dataTableOutput("raw_data_table")
 ```
