@@ -206,7 +206,7 @@ create_rate_boxplot <- function(full_long_df, target_utility, plot_subtitle) {
     geom_text(data = selected_df, 
               aes(x = Value, y = fct_reorder(Metric, Value, .fun = median, .desc = TRUE), 
                   label = paste0(target_utility, ": $", sprintf("%.2f", Value), " (", Percentile, "%ile)")),
-              hjust = -0.15, vjust = -0.5, color = "black", fontface = "bold", size = 4.5) +
+              hjust = -0.15, vjust = -0.5, color = "black", fontface = "bold", size = 4) +
     labs(
       title = paste("Rate Comparison:", target_utility, " vs. Competitors"),
       subtitle = paste(plot_subtitle, "| (n =", n_orgs, "utilities)"),
