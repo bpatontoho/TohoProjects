@@ -17,23 +17,46 @@ server: shiny
 #| context: setup
 #| echo: false
 #| output: false
+#| warning: false
 
 library(shiny)
 library(tidyverse)
 library(DT)
 
-# Load combined data and remove City of St. Cloud
+# Load combined data
 df <- read.csv("combinedratedata.csv", 
                check.names = FALSE, 
                stringsAsFactors = FALSE) |>
+  mutate(`Utility Name` = str_squish(`Utility Name`)) |>
   filter(`Utility Name` != "City of St. Cloud")
 
-# Load separated data and remove City of St. Cloud
+# Load separated data
 df_separated <- read.csv('separatedratedata.csv', 
                check.names = FALSE, 
                stringsAsFactors = FALSE) |>
+  mutate(`Utility Name` = str_squish(`Utility Name`)) |>
   filter(`Utility Name` != "City of St. Cloud")
 
+# Load utility data
+df_utilities <- read.csv('FL_Utility_Data.csv', 
+                         check.names = FALSE, 
+                         stringsAsFactors = FALSE) |>
+  mutate(
+    `Utility Name` = str_squish(`Utility Name`),
+    pop_cat = cut(
+      Population,
+      breaks = c(0, 50000, 100000, Inf),
+      labels = c("0 to 50,000 Pop.",
+                 "50,000 to 100,000 Pop.",
+                 "Over 100,000 Pop."),
+      right = FALSE
+    )
+  ) |>
+  select(`Utility Name`, WMD, pop_cat, County)
+
+# Join utility attributes onto main datasets
+df <- df |> left_join(df_utilities, by = "Utility Name")
+df_separated <- df_separated |> left_join(df_utilities, by = "Utility Name")
 
 # Define function to clean columns
 clean_currency <- function(x) {
@@ -50,17 +73,15 @@ df <- df |>
   ))
 
 # select columns
-df <- df |> select(-any_of(c("Rates Effective Date", 
-                           "Unit",
-                           "County",
-                           "Water Management District")))
+df <- df |> select(-any_of(c("Rates Effective Date", "Unit")))
 
 
 df_separated_water <- df_separated |> 
-  select(c('Utility Name',
+  select(any_of(c('Utility Name',
            'Water Minimum Charge',
            'Water Bill at 4,000 Gal (5.35Ccf)',
-           'Water Bill at 8,000 Gal (10.70 Ccf)'))
+           'Water Bill at 8,000 Gal (10.70 Ccf)',
+           'WMD', 'pop_cat', 'County')))
 
 df_separated_water <- df_separated_water |>
   mutate(across(
@@ -74,7 +95,8 @@ df_separated_wastewater <- df_separated |>
   select(any_of(c('Utility Name',
                   'Wastewater Minimum Charge',
                   'Wastewater Bill at 4,000 Gal (5.35Ccf)',
-                  'Wastewater Bill at 8,000 Gal (10.70 Ccf)')))
+                  'Wastewater Bill at 8,000 Gal (10.70 Ccf)',
+                  'WMD', 'pop_cat', 'County')))
 
 
 df_separated_wastewater <- df_separated_wastewater |>
@@ -126,11 +148,33 @@ df_long_wastewater <- df_separated_wastewater |>
 
 ```{r}
 #| echo: false
+
+# select Toho by default
 selectInput(
   inputId = "selected_utility",
   label = "Select Utility to Compare:",
   choices = sort(unique(df$`Utility Name`)),
   selected = "Toho Water Authority"
+)
+
+# Population Category Filter
+selectizeInput(
+  inputId = "selected_pop_cat",
+  label = "Population Category:",
+  choices = levels(df_utilities$pop_cat),
+  selected = levels(df_utilities$pop_cat),
+  multiple = TRUE,
+  options = list(plugins = list("remove_button"))
+)
+
+# Water Management District Filter
+selectizeInput(
+  inputId = "selected_wmd",
+  label = "Select Water Management District:",
+  choices = sort(unique(na.omit(df_utilities$WMD))),
+  selected = sort(unique(na.omit(df_utilities$WMD))),
+  multiple = TRUE,
+  options = list(plugins = list("remove_button"))
 )
 ```
 
@@ -194,13 +238,71 @@ DT::dataTableOutput("wastewater_table")
 
 colors <- c('#00AA65', '#0953A2', '#e3eefd')
 
-# box plot function
+
+# filtered data frames with slicers
+
+filtered_df <- reactive({
+  req(input$selected_wmd, input$selected_pop_cat)
+  df |>
+    filter(
+      (WMD %in% input$selected_wmd & pop_cat %in% input$selected_pop_cat) |
+      (`Utility Name` == input$selected_utility)
+    )
+})
+
+filtered_df_separated_water <- reactive({
+  req(input$selected_wmd, input$selected_pop_cat)
+  df_separated_water |>
+    filter(
+      (WMD %in% input$selected_wmd & pop_cat %in% input$selected_pop_cat) |
+      (`Utility Name` == input$selected_utility)
+    )
+})
+
+filtered_df_separated_wastewater <- reactive({
+  req(input$selected_wmd, input$selected_pop_cat)
+  df_separated_wastewater |>
+    filter(
+      (WMD %in% input$selected_wmd & pop_cat %in% input$selected_pop_cat) |
+      (`Utility Name` == input$selected_utility)
+    )
+})
+
+filtered_df_long <- reactive({
+  req(input$selected_wmd, input$selected_pop_cat)
+  df_long |>
+    filter(
+      (WMD %in% input$selected_wmd & pop_cat %in% input$selected_pop_cat) |
+      (`Utility Name` == input$selected_utility)
+    )
+})
+
+filtered_df_long_water <- reactive({
+  req(input$selected_wmd, input$selected_pop_cat)
+  df_long_water |>
+    filter(
+      (WMD %in% input$selected_wmd & pop_cat %in% input$selected_pop_cat) |
+      (`Utility Name` == input$selected_utility)
+    )
+})
+
+filtered_df_long_wastewater <- reactive({
+  req(input$selected_wmd, input$selected_pop_cat)
+  df_long_wastewater |>
+    filter(
+      (WMD %in% input$selected_wmd & pop_cat %in% input$selected_pop_cat) |
+      (`Utility Name` == input$selected_utility)
+    )
+})
+
+
+# Box Plot Function
+
 create_rate_boxplot <- function(full_long_df, 
                                 target_utility, 
                                 plot_subtitle, 
                                 accent_color) {
   
-# prep data
   req(target_utility)
   n_orgs <- n_distinct(full_long_df$`Utility Name`)
   
@@ -234,23 +336,23 @@ create_rate_boxplot <- function(full_long_df,
     
     # Add text label
     geom_text(data = selected_df,
-                  aes(x = Value, 
-                      y = fct_reorder(Metric, 
-                                      Value, .fun = median, 
-                                      .desc = TRUE), 
-                      label = paste0(target_utility, 
-                                     ": $", 
-                                     sprintf("%.2f", Value), 
-                                     " (", Percentile, "%ile)\n",
-                                     "Rank ", 
-                                     Rank, "/", 
-                                     n_orgs, 
-                                     " Utilities")),
-                  hjust = 0, 
-                  vjust = -0.6, 
-                  color = "black", 
-                  fontface = "bold", 
-                  size = 4) +
+              aes(x = Value, 
+                  y = fct_reorder(Metric, 
+                                  Value, .fun = median, 
+                                  .desc = TRUE), 
+                  label = paste0(target_utility, 
+                                 ": $", 
+                                 sprintf("%.2f", Value), 
+                                 " (", Percentile, "%ile)\n",
+                                 "Rank ", 
+                                 Rank, "/", 
+                                 n_orgs, 
+                                 " Utilities")),
+              hjust = 0, 
+              vjust = -0.6, 
+              color = "black", 
+              fontface = "bold", 
+              size = 4) +
     
     # Add axis labels and titles
     labs(
@@ -261,52 +363,82 @@ create_rate_boxplot <- function(full_long_df,
       caption = "Source: Raftelis — Florida Water and Wastewater Rate Survey (2026)"
     ) +
         
-        # Plot theme and aesthetics
-        theme_minimal(base_size = 12) +
-        theme(plot.title.position = "plot",
-            plot.title = element_text(face = "bold", size = 12),
-            plot.background = element_rect(color = accent_color, 
-                                           linewidth = 2, 
-                                           linetype = "solid"),
-            plot.caption = element_text(size = 8, 
-                                        color = "#666666", 
-                                        face = "italic", 
-                                        hjust = .5),
-            panel.grid.major.x = element_line(color = "#EBEBF4", linewidth = 0.5), 
-            panel.grid.minor.x = element_blank(),
-            panel.grid.major.y = element_blank()) +
+    # Plot theme and aesthetics
+    theme_minimal(base_size = 12) +
+    theme(plot.title.position = "plot",
+          plot.title = element_text(face = "bold", size = 12),
+          plot.background = element_rect(color = accent_color, 
+                                         linewidth = 2, 
+                                         linetype = "solid"),
+          plot.caption = element_text(size = 8, 
+                                      color = "#666666", 
+                                      face = "italic", 
+                                      hjust = .5),
+          panel.grid.major.x = element_line(color = "#EBEBF4", linewidth = 0.5), 
+          panel.grid.minor.x = element_blank(),
+          panel.grid.major.y = element_blank()) +
     
     expand_limits(x = max(full_long_df$Value, na.rm = TRUE) * 1.35)
 }
 
-# Render plots
+
+
+
+# Render Plots
 
 output$combined_plot <- renderPlot({
-  create_rate_boxplot(df_long, 
+  create_rate_boxplot(filtered_df_long(), 
                       input$selected_utility, 
                       "Combined Rates", 
                       colors[3])
 })
 
 output$water_plot <- renderPlot({
-  create_rate_boxplot(df_long_water, 
+  create_rate_boxplot(filtered_df_long_water(), 
                       input$selected_utility, 
                       "Water-Only Rates", 
                       colors[2])
 })
 
 output$wastewater_plot <- renderPlot({
-  create_rate_boxplot(df_long_wastewater, 
+  create_rate_boxplot(filtered_df_long_wastewater(), 
                       input$selected_utility, 
                       "Wastewater-Only Rates", 
                       colors[1])
 })
 
-# Render dynamic tables
+
+
+
+
+
+# Render Dynamic Tables
+
+combined_table_cols <- c(
+  'Utility Name',
+  'Minimum Charge',
+  'Bill at 4,000 Gal (5.35 Ccf)',
+  'Bill at 8,000 Gal (10.70 Ccf)'
+)
+
+water_table_cols <- c(
+  'Utility Name',
+  'Water Minimum Charge',
+  'Water Bill at 4,000 Gal (5.35Ccf)',
+  'Water Bill at 8,000 Gal (10.70 Ccf)'
+)
+
+wastewater_table_cols <- c(
+  'Utility Name',
+  'Wastewater Minimum Charge',
+  'Wastewater Bill at 4,000 Gal (5.35Ccf)',
+  'Wastewater Bill at 8,000 Gal (10.70 Ccf)'
+)
 
 output$combined_table <- DT::renderDT({
   DT::datatable(
-    df, 
+    filtered_df() |>
+      select(any_of(combined_table_cols)), 
     rownames = FALSE,
     caption = htmltools::tags$caption(
       style = 'caption-side: top;',
@@ -336,12 +468,26 @@ output$combined_table <- DT::renderDT({
         "}"
       )
     )
-  )
+  ) |>
+    # Highlight row matching selected utility
+    DT::formatStyle(
+      'Utility Name',
+      target = 'row',
+      backgroundColor = DT::styleEqual(
+        input$selected_utility, 
+        '#e3eefd'
+      ),
+      fontWeight = DT::styleEqual(
+        input$selected_utility, 
+        'bold'
+      )
+    )
 })
 
 output$water_table <- DT::renderDT({
   DT::datatable(
-    df_separated_water, 
+    filtered_df_separated_water() |>
+      select(any_of(water_table_cols)), 
     rownames = FALSE,
     caption = htmltools::tags$caption(
       style = 'caption-side: top;',
@@ -371,12 +517,25 @@ output$water_table <- DT::renderDT({
         "}"
       )
     )
-  )
+  ) |>
+    DT::formatStyle(
+      'Utility Name',
+      target = 'row',
+      backgroundColor = DT::styleEqual(
+        input$selected_utility, 
+        '#e3eefd'
+      ),
+      fontWeight = DT::styleEqual(
+        input$selected_utility, 
+        'bold'
+      )
+    )
 })
 
 output$wastewater_table <- DT::renderDT({
   DT::datatable(
-    df_separated_wastewater, 
+    filtered_df_separated_wastewater() |>
+      select(any_of(wastewater_table_cols)), 
     rownames = FALSE,
     caption = htmltools::tags$caption(
       style = 'caption-side: top;',
@@ -406,6 +565,18 @@ output$wastewater_table <- DT::renderDT({
         "}"
       )
     )
-  )
+  ) |>
+    DT::formatStyle(
+      'Utility Name',
+      target = 'row',
+      backgroundColor = DT::styleEqual(
+        input$selected_utility, 
+        '#e3eefd'
+      ),
+      fontWeight = DT::styleEqual(
+        input$selected_utility, 
+        'bold'
+      )
+    )
 })
 ```
